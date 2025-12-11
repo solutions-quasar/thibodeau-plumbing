@@ -1,13 +1,12 @@
 // Firebase Configuration
-// Production Credentials provided by User
+// Thibodeau Plumbing CRM - Production Credentials
 const firebaseConfig = {
-    apiKey: "AIzaSyDbzW5JG3fNNK3p7qvz3ClsTqXfiDlT0qY",
-    authDomain: "wilco-crm.firebaseapp.com",
-    projectId: "wilco-crm",
-    storageBucket: "wilco-crm.firebasestorage.app",
-    messagingSenderId: "972911714150",
-    appId: "1:972911714150:web:56656d3365d045ebd1b2a7",
-    measurementId: "G-CMVWDF4LPS"
+    apiKey: "AIzaSyC9sDG5Kwpgu-IMC_gNx4xA1binRgOyjfE",
+    authDomain: "thibodeau-plumbing-crm.firebaseapp.com",
+    projectId: "thibodeau-plumbing-crm",
+    storageBucket: "thibodeau-plumbing-crm.firebasestorage.app",
+    messagingSenderId: "166282228396",
+    appId: "1:166282228396:web:9fc2b204c6295c2f78a509"
 };
 
 // Export for use in crm.js
