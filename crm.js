@@ -1,5 +1,5 @@
 /**
- * Wilco CRM Logic
+ * Thibodeau CRM Logic
  * Handles Firebase connection, Sidebar Navigation, Local Storage Persistence, CRUD Modals, Date Navigation, Products, Clients, and Team.
  */
 
@@ -541,8 +541,8 @@ const crm = {
             { id: 'client_2', name: 'Sarah Smith', email: 'sarah@test.com', phone: '555-0102', address: '123 Maple St' }
         ];
         const defaultTeam = [
-            { id: 'user_1', name: 'Lukas Wilson', role: 'Owner', email: 'admin@wilco.com', phone: '555-0001' },
-            { id: 'user_2', name: 'Mike Plumber', role: 'Technician', email: 'mike@wilco.com', phone: '555-0002' }
+            { id: 'user_1', name: 'Thibodeau Admin', role: 'Owner', email: 'admin@thibodeau.com', phone: '555-0001' },
+            { id: 'user_2', name: 'Mike Plumber', role: 'Technician', email: 'mike@thibodeau.com', phone: '555-0002' }
         ];
 
         // Add to batch
