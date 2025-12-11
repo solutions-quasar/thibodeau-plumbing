@@ -25,7 +25,7 @@ const crm = {
     activeMenuId: null,
     onboardingStep: 0,
     onboardingSteps: [
-        { title: "Welcome to WilcoCRM 🚀", text: "Your all-in-one command center for managing leads, clients, and jobs. Let's take a quick tour!", icon: "👋" },
+        { title: "Welcome to Thibodeau CRM 🚀", text: "Your all-in-one command center for managing leads, clients, and jobs. Let's take a quick tour!", icon: "👋" },
         { title: "The Sidebar 📂", text: "Use the menu on the left to navigate between Leads, Schedule, Invoices, Team, and Messages.", icon: "⬅️" },
         { title: "Quick Actions ⚡", text: "Use the buttons on any item to Edit, Delete, or Archive it instantly.", icon: "✅" },
         { title: "You're Ready! ✅", text: "That's it! You can start managing your business. Click 'Finish' to jump in.", icon: "🎉" }
@@ -97,17 +97,9 @@ const crm = {
             }
         });
 
-        // Password Toggle Logic
-        const togglePassword = document.getElementById('toggle-password');
-        const passwordInput = document.getElementById('password');
-        if (togglePassword && passwordInput) {
-            togglePassword.addEventListener('click', () => {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                // Optional: Change icon opacity or style to indicate state
-                togglePassword.style.opacity = type === 'text' ? '1' : '0.5';
-            });
-        }
+
+        // Password Toggle Logic moved to setupEventListeners to prevent duplication
+
     },
 
     // --- AUTH EXTENSIONS ---
@@ -319,9 +311,9 @@ const crm = {
         this.isMock = true;
         // Mock Auth
         this.auth = {
-            currentUser: { uid: 'mock_user_1', email: 'demo@wilco.com' },
+            currentUser: { uid: 'mock_user_1', email: 'demo@thibodeau.com' },
             signOut: () => Promise.resolve(),
-            onAuthStateChanged: (cb) => cb({ uid: 'mock_user_1', email: 'demo@wilco.com' })
+            onAuthStateChanged: (cb) => cb({ uid: 'mock_user_1', email: 'demo@thibodeau.com' })
         };
         this.loadLocalData();
     },
@@ -404,7 +396,7 @@ const crm = {
         if (localMessages) this.messages = JSON.parse(localMessages);
         else {
             this.messages = [
-                { sender: "System", text: "Welcome to Wilco Chat! Type @ai to test the new agent.", senderId: "system", timestamp: Date.now() }
+                { sender: "System", text: "Welcome to Thibodeau Chat! Type @ai to test the new agent.", senderId: "system", timestamp: Date.now() }
             ];
             this.saveLocalData();
         }
